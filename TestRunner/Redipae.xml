@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="REDIPAE" verbose="3">
+    <listeners>
+        <listener class-name="com.Redipae.Utilities.ReportingConfig"/>
+    </listeners>
+
+    <test name=" LoginPage">
+        <classes>
+            <class name="com.Redipae.Testcases.LoginTest">
+                <methods>
+                    <include name="TC_001_VerifyWithValidCredentials"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <parameter name="username" value="Ezhilraj"/>
+    <parameter name="Firstname" value="Ezhil"/>
+    <parameter name="EmailID" value="ezhilrj6@gmail.com"/>
+    <parameter name="Password" value="Test@123"/>
+    <parameter name="RePassword" value="Test@123"/>
+    <parameter name="Rolelist" value="Retailer"/>
+    <parameter name="Clientlist" value="ITC Ltd"/>
+    <test name=" UsermasterPage">
+        <classes>
+            <class name="com.Redipae.Testcases.AddUploadUser">
+                <methods>
+                    <include name="TC_010_Verify_AddUser"/>
+                    <include name="TC_011_Validate_DuplicateUser"/>
+                    <include name="TC_012_Verify_TextboxErrormessage"/>
+                    <include name="TC_014_Verify_Download_USermaster"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
