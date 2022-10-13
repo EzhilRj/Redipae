@@ -11,7 +11,7 @@ public class Login_PageObjects {
 	@FindBy(id = "password")
 	public static WebElement Password;
 
-	@FindBy(xpath = "/html/body/div[4]/form/div[3]/button")
+	@FindBy(xpath = "//*[text()='Login']")
 	public static WebElement LoginButton;
 
 	@FindBy(xpath = "//*[text()='Dashboard']")
@@ -20,7 +20,7 @@ public class Login_PageObjects {
 	@FindBy(className = "error")
 	public static WebElement error;
 
-	@FindBy(xpath = "/html/body/div[3]/div/div[2]/ul/li/a")
+	@FindBy(xpath = "//*[@class=\"username username-hide-on-mobile\"]")
 	public static WebElement Userdropdown;
 
 	@FindBy(xpath = "//*[text()='Logout']")

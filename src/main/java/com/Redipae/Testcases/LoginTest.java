@@ -27,7 +27,7 @@ public class LoginTest extends Setup {
 
 	}
 
-	@Test(dependsOnMethods = { "TC_001_VerifyWithValidCredentials" })
+	@Test(priority = 2)
 	void clickLogout() throws InterruptedException {
 
 		if (db == true) {
@@ -41,7 +41,7 @@ public class LoginTest extends Setup {
 		}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void TC_002_Verifywith_INValidPassword() throws InterruptedException {
 
 		PageFactory.initElements(driver, Login_PageObjects.class);
@@ -53,7 +53,7 @@ public class LoginTest extends Setup {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void TC_003_Verifywith_INValidUsername() throws InterruptedException {
 
 		PageFactory.initElements(driver, Login_PageObjects.class);
@@ -67,7 +67,7 @@ public class LoginTest extends Setup {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void TC_004_Verifywith_INValidCredentials() throws InterruptedException {
 
 		PageFactory.initElements(driver, Login_PageObjects.class);
@@ -81,7 +81,7 @@ public class LoginTest extends Setup {
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void TC_005_VerifyWithNull_Value() throws InterruptedException {
 
 		PageFactory.initElements(driver, Login_PageObjects.class);
@@ -97,7 +97,7 @@ public class LoginTest extends Setup {
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void TC_006_VerifyWithNull_Value_in_Username() throws InterruptedException {
 
 		driver.navigate().refresh();
@@ -111,7 +111,7 @@ public class LoginTest extends Setup {
 
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void TC_007_VerifyWithNull_Value_in_Password() throws InterruptedException {
 
 		driver.navigate().refresh();
@@ -123,7 +123,7 @@ public class LoginTest extends Setup {
 		
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void TC_008_Verifywith_NumericValues() throws InterruptedException {
 
 		PageFactory.initElements(driver, Login_PageObjects.class);
@@ -137,7 +137,7 @@ public class LoginTest extends Setup {
 
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 10)
 	public void TC_009_Verifywith_SpecialCharacters() throws InterruptedException {
 
 		PageFactory.initElements(driver, Login_PageObjects.class);
@@ -148,6 +148,11 @@ public class LoginTest extends Setup {
 		Login_PageObjects.LoginButton.click();
 		boolean em = Login_PageObjects.error.isDisplayed();
 		Assert.assertTrue(true, "Testcase Passed");
+
+		Login_PageObjects.username.clear();
+		Login_PageObjects.Password.clear();
+
+
 
 	}
 

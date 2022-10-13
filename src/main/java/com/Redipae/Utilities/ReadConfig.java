@@ -54,18 +54,13 @@ public class ReadConfig {
     }
 
 
-    public String Downloadingpath() {
-
-        String downpath = pro.getProperty("downloadinglocation");
-        return downpath;
-
-    }
-
     public String Uploadingpath() {
 
         String Uploadpath = pro.getProperty("UploadFilesLocation");
         return Uploadpath;
 
     }
+
+
 
 }

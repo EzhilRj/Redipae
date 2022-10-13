@@ -28,135 +28,139 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 public class Setup {
 
-	ReadConfig readconfig = new ReadConfig();
-	public String browser = readconfig.GetBrowser();
-	public String Baseurl = readconfig.getapplicationURL();
-	public String username = readconfig.GetUsername();
-	public String password = readconfig.GetPassword();
-	public String downloadedfilespath = readconfig.Downloadingpath();
-	public String UploadingFilespath  = readconfig.Uploadingpath();
+    static ReadConfig readconfig = new ReadConfig();
+    public String browser = readconfig.GetBrowser();
+    public String Baseurl = readconfig.getapplicationURL();
+    public String username = readconfig.GetUsername();
+    public String password = readconfig.GetPassword();
 
-	public static Logger logger;
-	protected static WebDriver driver;
-	long StartTime;
-	long endTime;
 
-	@BeforeSuite
-	public void Login() throws InterruptedException {
+    public static Logger logger;
+    protected static WebDriver driver;
+    long StartTime;
+    long endTime;
 
-		Logger logger = Logger.getLogger("Redipae");
-		DOMConfigurator.configure("Log4J.xml");
+    @BeforeSuite
+    public void Login() throws InterruptedException {
 
-		HashMap preferences = new HashMap();
-		preferences.put("download.default_directory", downloadedfilespath);
+        String downloadinglocation = System.getProperty("user.dir")+"\\DownloadingFiles\\";
+        String Uploadinglocation = System.getProperty("user.dir")+"\\Upload Files\\";
 
-		ChromeOptions options = new ChromeOptions();
-		options.setExperimentalOption("prefs",preferences);
+        Logger logger = Logger.getLogger("Redipae");
+        DOMConfigurator.configure("Log4J.xml");
 
-		if (browser.equalsIgnoreCase("Chrome")) {
+        //Chrome
+        HashMap preferences  =  new HashMap();
+        preferences.put("download.default_directory",downloadinglocation);
 
-			logger.info("Chrome is Opened");
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("prefs",preferences);
 
-		} else if (browser.equalsIgnoreCase("firefox")) {
+        if (browser.equalsIgnoreCase("Chrome")) {
 
-			logger.info("Firefox is Opened");
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver(options);
+            logger.info("Chrome is Opened");
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver(options);
 
-		} else if (browser.equalsIgnoreCase("Edge")) {
+        } else if (browser.equalsIgnoreCase("firefox")) {
 
-			logger.info("Microsoft Edge is Opened");
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver(options);
+            logger.info("Firefox is Opened");
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver(options);
 
-		}
+        } else if (browser.equalsIgnoreCase("Edge")) {
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get(Baseurl);
-		driver.manage().window().maximize();
+            logger.info("Microsoft Edge is Opened");
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver(options);
 
-	}
+        }
 
-	@AfterSuite(enabled = false)
-	public void closebrowser() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get(Baseurl);
+        driver.manage().window().maximize();
 
-		driver.quit();
-		endTime = System.currentTimeMillis();
-		long Totaltime = endTime - StartTime;
-		System.out.println("TIMETAKEN:" + Totaltime);
+    }
 
-	}
+    @AfterSuite(enabled = false)
+    public void closebrowser() throws InterruptedException {
 
-	public void captureScreen(ITestResult result) throws IOException {
+        driver.quit();
+        endTime = System.currentTimeMillis();
+        long Totaltime = endTime - StartTime;
+        System.out.println("TIMETAKEN:" + Totaltime);
 
-		if (result.getStatus() == ITestResult.FAILURE) {
-			TakesScreenshot ts = (TakesScreenshot) driver;
-			File source = ts.getScreenshotAs(OutputType.FILE); // capture screenshot file
-			File target = new File(System.getProperty("user.dir") + "/ScreenShots/" + result.getName() + ".png");
+    }
 
-			FileUtils.copyFile(source, target);
-			System.out.println("Screenshot captured");
-		}
+    public void captureScreen(ITestResult result) throws IOException {
 
-	}
+        if (result.getStatus() == ITestResult.FAILURE) {
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            File source = ts.getScreenshotAs(OutputType.FILE); // capture screenshot file
+            File target = new File(System.getProperty("user.dir") + "/ScreenShots/" + result.getName() + ".png");
 
-	public String getrandomemail() {
+            FileUtils.copyFile(source, target);
+            System.out.println("Screenshot captured");
+        }
 
-		String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-		StringBuilder salt = new StringBuilder();
-		Random rnd = new Random();
-		while (salt.length() < 10) { // length of the random string.
-			int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-			salt.append(SALTCHARS.charAt(index));
-		}
-		String saltStr = salt.toString();
-		return saltStr;
+    }
 
-	}
+    public String getrandomemail() {
 
-	public String GetRandomString() {
+        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 10) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
 
-		String Randstr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		StringBuilder salt = new StringBuilder();
-		Random rnd = new Random();
-		while (salt.length() < 10) { // length of the random string.
-			int index = (int) (rnd.nextFloat() * Randstr.length());
-			salt.append(Randstr.charAt(index));
-		}
-		String RandomStr = salt.toString();
-		return RandomStr;
+    }
 
-	}
-	
-	public String GetRandomNumber() {
+    public String GetRandomString() {
 
-		int randomnum1 = ThreadLocalRandom.current().nextInt();
+        String Randstr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 10) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * Randstr.length());
+            salt.append(Randstr.charAt(index));
+        }
+        String RandomStr = salt.toString();
+        return RandomStr;
+
+    }
+
+    public String GetRandomNumber() {
+
+        int randomnum1 = ThreadLocalRandom.current().nextInt();
         String randomnum = String.valueOf(randomnum1);
-        
-		return randomnum;
-        
-	}
-	
-	public String GetRandomSpecialCharacters() {
 
-		String Randspecchar= "!@#$%^&*()_+{}";
-		StringBuilder salt = new StringBuilder();
-		Random rnd = new Random();
-		while (salt.length() < 10) { // length of the random string.
-			int index = (int) (rnd.nextFloat() * Randspecchar.length());
-			salt.append(Randspecchar.charAt(index));
-		}
-		String Randomspecailcharac = salt.toString();
-		return Randomspecailcharac;
+        return randomnum;
 
-	}
+    }
+
+    public String GetRandomSpecialCharacters() {
+
+        String Randspecchar = "!@#$%^&*()_+{}";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 10) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * Randspecchar.length());
+            salt.append(Randspecchar.charAt(index));
+        }
+        String Randomspecailcharac = salt.toString();
+        return Randomspecailcharac;
+
+    }
 
 }
