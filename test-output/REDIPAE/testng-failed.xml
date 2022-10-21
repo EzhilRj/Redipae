@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [REDIPAE]" guice-stage="DEVELOPMENT" verbose="3">
+  <parameter name="Firstname" value="Ezhil"/>
+  <parameter name="EmailID" value="ezhilrj6@gmail.com"/>
+  <parameter name="RePassword" value="Test@123"/>
+  <parameter name="Rolelist" value="Merc"/>
+  <parameter name="Clientlist" value="ITC Ltd"/>
+  <parameter name="username" value="Bharathi"/>
+  <parameter name="Password" value="Test@123"/>
   <listeners>
     <listener class-name="com.Redipae.Utilities.ReportingConfig"/>
   </listeners>
@@ -8,9 +15,10 @@
     <classes>
       <class name="com.Redipae.Testcases.AddUploadUser">
         <methods>
-          <include name="Adduploaduser"/>
+          <include name="TC_011_Validate_DuplicateUser" invocation-numbers="0"/>
           <include name="Login"/>
           <include name="closebrowser"/>
+          <include name="TC_010_Verify_AddUser" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.Redipae.Testcases.AddUploadUser -->
     </classes>

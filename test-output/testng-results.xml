@@ -1,35 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="14" total="28" passed="12" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-10T16:13:27 IST" name="Default suite" finished-at="2022-09-10T16:13:27 IST" duration-ms="45">
+  <suite started-at="2022-10-20T11:58:14 IST" name="REDIPAE" finished-at="2022-10-20T11:58:27 IST" duration-ms="12992">
     <groups>
     </groups>
-    <test started-at="2022-09-10T16:13:27 IST" name="Default test" finished-at="2022-09-10T16:13:27 IST" duration-ms="45">
-      <class name="com.Redipae.Testcases.AddUploadUser">
-        <test-method is-config="true" signature="Login()[pri:0, instance:com.Redipae.Testcases.AddUploadUser@771a660]" started-at="2022-09-10T16:13:20 IST" name="Login" finished-at="2022-09-10T16:13:27 IST" duration-ms="7697" status="PASS">
+    <test started-at="2022-10-20T11:58:14 IST" name=" LoginPage" finished-at="2022-10-20T11:58:20 IST" duration-ms="5896">
+      <class name="com.Redipae.Testcases.LoginTest">
+        <test-method signature="TC_001_VerifyWithValidCredentials()[pri:1, instance:com.Redipae.Testcases.LoginTest@5ab956d7]" started-at="2022-10-20T11:58:15 IST" name="TC_001_VerifyWithValidCredentials" finished-at="2022-10-20T11:58:16 IST" duration-ms="1012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_VerifyWithValidCredentials -->
+        <test-method signature="clickLogout()[pri:2, instance:com.Redipae.Testcases.LoginTest@5ab956d7]" started-at="2022-10-20T11:58:16 IST" name="clickLogout" finished-at="2022-10-20T11:58:16 IST" duration-ms="493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickLogout -->
+        <test-method signature="TC_002_Verifywith_INValidPassword()[pri:3, instance:com.Redipae.Testcases.LoginTest@5ab956d7]" started-at="2022-10-20T11:58:16 IST" name="TC_002_Verifywith_INValidPassword" finished-at="2022-10-20T11:58:17 IST" duration-ms="473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002_Verifywith_INValidPassword -->
+        <test-method signature="TC_003_Verifywith_INValidUsername()[pri:4, instance:com.Redipae.Testcases.LoginTest@5ab956d7]" started-at="2022-10-20T11:58:17 IST" name="TC_003_Verifywith_INValidUsername" finished-at="2022-10-20T11:58:17 IST" duration-ms="615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_Verifywith_INValidUsername -->
+        <test-method signature="TC_004_Verifywith_INValidCredentials()[pri:5, instance:com.Redipae.Testcases.LoginTest@5ab956d7]" started-at="2022-10-20T11:58:17 IST" name="TC_004_Verifywith_INValidCredentials" finished-at="2022-10-20T11:58:18 IST" duration-ms="457" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_Verifywith_INValidCredentials -->
+        <test-method signature="TC_005_VerifyWithNull_Value()[pri:6, instance:com.Redipae.Testcases.LoginTest@5ab956d7]" started-at="2022-10-20T11:58:18 IST" name="TC_005_VerifyWithNull_Value" finished-at="2022-10-20T11:58:18 IST" duration-ms="524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_VerifyWithNull_Value -->
+        <test-method signature="TC_006_VerifyWithNull_Value_in_Username()[pri:7, instance:com.Redipae.Testcases.LoginTest@5ab956d7]" started-at="2022-10-20T11:58:18 IST" name="TC_006_VerifyWithNull_Value_in_Username" finished-at="2022-10-20T11:58:19 IST" duration-ms="659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006_VerifyWithNull_Value_in_Username -->
+        <test-method signature="TC_007_VerifyWithNull_Value_in_Password()[pri:8, instance:com.Redipae.Testcases.LoginTest@5ab956d7]" started-at="2022-10-20T11:58:19 IST" name="TC_007_VerifyWithNull_Value_in_Password" finished-at="2022-10-20T11:58:19 IST" duration-ms="423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007_VerifyWithNull_Value_in_Password -->
+        <test-method signature="TC_008_Verifywith_NumericValues()[pri:9, instance:com.Redipae.Testcases.LoginTest@5ab956d7]" started-at="2022-10-20T11:58:19 IST" name="TC_008_Verifywith_NumericValues" finished-at="2022-10-20T11:58:20 IST" duration-ms="386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_008_Verifywith_NumericValues -->
+        <test-method signature="TC_009_Verifywith_SpecialCharacters()[pri:10, instance:com.Redipae.Testcases.LoginTest@5ab956d7]" started-at="2022-10-20T11:58:20 IST" name="TC_009_Verifywith_SpecialCharacters" finished-at="2022-10-20T11:58:20 IST" duration-ms="635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_009_Verifywith_SpecialCharacters -->
+      </class> <!-- com.Redipae.Testcases.LoginTest -->
+    </test> <!--  LoginPage -->
+    <test started-at="2022-10-20T11:58:21 IST" name=" UsermasterPage" finished-at="2022-10-20T11:58:27 IST" duration-ms="6535">
+      <class name="com.Redipae.Testcases.LoginTest">
+        <test-method is-config="true" signature="Login()[pri:0, instance:com.Redipae.Testcases.LoginTest@196a42c3]" started-at="2022-10-20T11:58:10 IST" name="Login" finished-at="2022-10-20T11:58:14 IST" duration-ms="4577" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="Adduploaduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.Redipae.Testcases.AddUploadUser@771a660]" started-at="2022-09-10T16:13:27 IST" name="Adduploaduser" finished-at="2022-09-10T16:13:27 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
+        <test-method signature="TC_001_VerifyWithValidCredentials()[pri:1, instance:com.Redipae.Testcases.LoginTest@196a42c3]" started-at="2022-10-20T11:58:21 IST" name="TC_001_VerifyWithValidCredentials" finished-at="2022-10-20T11:58:21 IST" duration-ms="564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_VerifyWithValidCredentials -->
+      </class> <!-- com.Redipae.Testcases.LoginTest -->
+      <class name="com.Redipae.Testcases.AddUploadUser">
+        <test-method signature="TC_011_Validate_DuplicateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.Redipae.Testcases.AddUploadUser@4c60d6e9]" started-at="2022-10-20T11:58:21 IST" name="TC_011_Validate_DuplicateUser" finished-at="2022-10-20T11:58:23 IST" duration-ms="1925" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bharathi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ezhil]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ezhilrj6@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Merc]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ITC Ltd]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.UnsupportedClassVersionError">
             <message>
-              <![CDATA[
-Cannot inject @Test annotated Method [Adduploaduser] with [class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+              <![CDATA[com/microsoft/sqlserver/jdbc/SQLServerDriver has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 61.0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Cannot inject @Test annotated Method [Adduploaduser] with [class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:439)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:353)
-at org.testng.internal.Parameters.createParameters(Parameters.java:708)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:884)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+              <![CDATA[java.lang.UnsupportedClassVersionError: com/microsoft/sqlserver/jdbc/SQLServerDriver has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)
+at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+at java.base/java.lang.Class.forName0(Native Method)
+at java.base/java.lang.Class.forName(Class.java:375)
+at com.Redipae.Utilities.DBConfig.ConnectDB(DBConfig.java:14)
+at com.Redipae.Testcases.AddUploadUser.TC_011_Validate_DuplicateUser(AddUploadUser.java:82)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -51,15 +148,143 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.UnsupportedClassVersionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Adduploaduser -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.Redipae.Testcases.AddUploadUser@771a660]" started-at="2022-09-10T16:13:27 IST" name="closebrowser" finished-at="2022-09-10T16:13:28 IST" duration-ms="622" status="PASS">
+        </test-method> <!-- TC_011_Validate_DuplicateUser -->
+        <test-method signature="TC_010_Verify_AddUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.Redipae.Testcases.AddUploadUser@4c60d6e9]" started-at="2022-10-20T11:58:23 IST" name="TC_010_Verify_AddUser" finished-at="2022-10-20T11:58:25 IST" duration-ms="1549" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bharathi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ezhil]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ezhilrj6@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Merc]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ITC Ltd]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.UnsupportedClassVersionError">
+            <message>
+              <![CDATA[com/microsoft/sqlserver/jdbc/SQLServerDriver has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 61.0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.UnsupportedClassVersionError: com/microsoft/sqlserver/jdbc/SQLServerDriver has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)
+at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+at java.base/java.lang.Class.forName0(Native Method)
+at java.base/java.lang.Class.forName(Class.java:375)
+at com.Redipae.Utilities.DBConfig.ConnectDB(DBConfig.java:14)
+at com.Redipae.Testcases.AddUploadUser.TC_010_Verify_AddUser(AddUploadUser.java:43)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.UnsupportedClassVersionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closebrowser -->
+        </test-method> <!-- TC_010_Verify_AddUser -->
+        <test-method signature="TC_012_Verify_TextboxErrormessage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.Redipae.Testcases.AddUploadUser@4c60d6e9]" started-at="2022-10-20T11:58:25 IST" name="TC_012_Verify_TextboxErrormessage" finished-at="2022-10-20T11:58:27 IST" duration-ms="2472" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bharathi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ezhil]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ezhilrj6@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Merc]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ITC Ltd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_012_Verify_TextboxErrormessage -->
       </class> <!-- com.Redipae.Testcases.AddUploadUser -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!--  UsermasterPage -->
+  </suite> <!-- REDIPAE -->
 </testng-results>

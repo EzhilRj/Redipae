@@ -8,22 +8,47 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">45</td><td></td><td></td></tr>
+<tr><th colspan="8">REDIPAE</th></tr>
+<tr><td><a href="#t0"> LoginPage</a></td><td class="num">10</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5,896</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1"> UsermasterPage</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">6,535</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">12</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">12,431</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.Redipae.Testcases.AddUploadUser</td><td><a href="#m0">Adduploaduser</a></td><td rowspan="1">1662806607929</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">REDIPAE</th></tr></tbody><tbody id="t0"><tr><th colspan="4"> LoginPage &#8212; passed</th></tr><tr class="passedeven"><td rowspan="10">com.Redipae.Testcases.LoginTest</td><td><a href="#m0">TC_001_VerifyWithValidCredentials</a></td><td rowspan="1">1666247295107</td><td rowspan="1">1012</td></tr><tr class="passedeven"><td><a href="#m1">TC_002_Verifywith_INValidPassword</a></td><td rowspan="1">1666247296626</td><td rowspan="1">473</td></tr><tr class="passedeven"><td><a href="#m2">TC_003_Verifywith_INValidUsername</a></td><td rowspan="1">1666247297100</td><td rowspan="1">615</td></tr><tr class="passedeven"><td><a href="#m3">TC_004_Verifywith_INValidCredentials</a></td><td rowspan="1">1666247297716</td><td rowspan="1">457</td></tr><tr class="passedeven"><td><a href="#m4">TC_005_VerifyWithNull_Value</a></td><td rowspan="1">1666247298175</td><td rowspan="1">524</td></tr><tr class="passedeven"><td><a href="#m5">TC_006_VerifyWithNull_Value_in_Username</a></td><td rowspan="1">1666247298701</td><td rowspan="1">659</td></tr><tr class="passedeven"><td><a href="#m6">TC_007_VerifyWithNull_Value_in_Password</a></td><td rowspan="1">1666247299363</td><td rowspan="1">423</td></tr><tr class="passedeven"><td><a href="#m7">TC_008_Verifywith_NumericValues</a></td><td rowspan="1">1666247299788</td><td rowspan="1">386</td></tr><tr class="passedeven"><td><a href="#m8">TC_009_Verifywith_SpecialCharacters</a></td><td rowspan="1">1666247300176</td><td rowspan="1">635</td></tr><tr class="passedeven"><td><a href="#m9">clickLogout</a></td><td rowspan="1">1666247296130</td><td rowspan="1">493</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4"> UsermasterPage &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.Redipae.Testcases.AddUploadUser</td><td><a href="#m10">TC_010_Verify_AddUser</a></td><td rowspan="1">1666247303885</td><td rowspan="1">1549</td></tr><tr class="failedeven"><td><a href="#m11">TC_011_Validate_DuplicateUser</a></td><td rowspan="1">1666247301953</td><td rowspan="1">1925</td></tr><tr><th colspan="4"> UsermasterPage &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.Redipae.Testcases.AddUploadUser</td><td><a href="#m12">TC_012_Verify_TextboxErrormessage</a></td><td rowspan="1">1666247305437</td><td rowspan="1">2472</td></tr><tr class="passedodd"><td rowspan="1">com.Redipae.Testcases.LoginTest</td><td><a href="#m13">TC_001_VerifyWithValidCredentials</a></td><td rowspan="1">1666247301386</td><td rowspan="1">564</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.Redipae.Testcases.AddUploadUser#Adduploaduser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Cannot inject @Test annotated Method [Adduploaduser] with [class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:439)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:353)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:708)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:884)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+<h2> LoginPage</h2><h3 id="m0">com.Redipae.Testcases.LoginTest#TC_001_VerifyWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.Redipae.Testcases.LoginTest#TC_002_Verifywith_INValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.Redipae.Testcases.LoginTest#TC_003_Verifywith_INValidUsername</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.Redipae.Testcases.LoginTest#TC_004_Verifywith_INValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.Redipae.Testcases.LoginTest#TC_005_VerifyWithNull_Value</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.Redipae.Testcases.LoginTest#TC_006_VerifyWithNull_Value_in_Username</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.Redipae.Testcases.LoginTest#TC_007_VerifyWithNull_Value_in_Password</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.Redipae.Testcases.LoginTest#TC_008_Verifywith_NumericValues</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.Redipae.Testcases.LoginTest#TC_009_Verifywith_SpecialCharacters</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.Redipae.Testcases.LoginTest#clickLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2> UsermasterPage</h2><h3 id="m10">com.Redipae.Testcases.AddUploadUser#TC_010_Verify_AddUser</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th></tr><tr class="param stripe"><td>Bharathi</td><td>Ezhil</td><td>ezhilrj6@gmail.com</td><td>Test@123</td><td>Test@123</td><td>Merc</td><td>ITC Ltd</td></tr><tr><th colspan="7">Exception</th></tr><tr><td colspan="7"><div class="stacktrace">java.lang.UnsupportedClassVersionError: com/microsoft/sqlserver/jdbc/SQLServerDriver has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
+	at com.Redipae.Utilities.DBConfig.ConnectDB(DBConfig.java:14)
+	at com.Redipae.Testcases.AddUploadUser.TC_010_Verify_AddUser(AddUploadUser.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -44,5 +69,50 @@ For more information on native dependency injection please refer to https://test
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">com.Redipae.Testcases.AddUploadUser#TC_011_Validate_DuplicateUser</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th></tr><tr class="param stripe"><td>Bharathi</td><td>Ezhil</td><td>ezhilrj6@gmail.com</td><td>Test@123</td><td>Test@123</td><td>Merc</td><td>ITC Ltd</td></tr><tr><th colspan="7">Exception</th></tr><tr><td colspan="7"><div class="stacktrace">java.lang.UnsupportedClassVersionError: com/microsoft/sqlserver/jdbc/SQLServerDriver has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
+	at com.Redipae.Utilities.DBConfig.ConnectDB(DBConfig.java:14)
+	at com.Redipae.Testcases.AddUploadUser.TC_011_Validate_DuplicateUser(AddUploadUser.java:82)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">com.Redipae.Testcases.AddUploadUser#TC_012_Verify_TextboxErrormessage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th></tr><tr class="param stripe"><td>Bharathi</td><td>Ezhil</td><td>ezhilrj6@gmail.com</td><td>Test@123</td><td>Test@123</td><td>Merc</td><td>ITC Ltd</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">com.Redipae.Testcases.LoginTest#TC_001_VerifyWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

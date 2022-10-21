@@ -5,9 +5,12 @@
     <classes>
       <class name="com.Redipae.Testcases.AddUploadUser">
         <methods>
-          <include name="Adduploaduser"/>
+          <include name="TC_011_Validate_DuplicateUser"/>
           <include name="Login"/>
+          <include name="TC_012_Verify_TextboxErrormessage"/>
+          <include name="TC_014_Verify_Export_USermaster"/>
           <include name="closebrowser"/>
+          <include name="TC_010_Verify_AddUser"/>
         </methods>
       </class> <!-- com.Redipae.Testcases.AddUploadUser -->
     </classes>

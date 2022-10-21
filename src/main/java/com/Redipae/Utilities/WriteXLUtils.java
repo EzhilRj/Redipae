@@ -1,5 +1,7 @@
 package com.Redipae.Utilities;
 
+import com.Redipae.Testcases.AddUploadUser;
+import com.Redipae.Testcases.Setup;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
@@ -7,7 +9,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class WriteXLUtils {
+public class WriteXLUtils extends AddUploadUser {
 
 
     static HSSFWorkbook workbook = new HSSFWorkbook();
@@ -33,10 +35,12 @@ public class WriteXLUtils {
 
       //Writing Testdatas
 
+        String usermasterusername = GetRandomString();
+        String usermasteremail = getrandomemail();
         sheet.createRow(1);
-        sheet.getRow(1).createCell(0).setCellValue("EzhilRaj");
+        sheet.getRow(1).createCell(0).setCellValue(usermasterusername);
         sheet.getRow(1).createCell(1).setCellValue("Ezhil");
-        sheet.getRow(1).createCell(2).setCellValue("ezhilrj24@gmail.com");
+        sheet.getRow(1).createCell(2).setCellValue(usermasteremail);
         sheet.getRow(1).createCell(3).setCellValue("test@123");
         sheet.getRow(1).createCell(4).setCellValue("3");
         sheet.getRow(1).createCell(5).setCellValue("15");

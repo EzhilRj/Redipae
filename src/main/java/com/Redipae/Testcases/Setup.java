@@ -89,7 +89,7 @@ public class Setup {
 
     }
 
-    @AfterSuite(enabled = false)
+    @AfterSuite(enabled = true)
     public void closebrowser() throws InterruptedException {
 
         driver.quit();
@@ -112,7 +112,7 @@ public class Setup {
 
     }
 
-    public String getrandomemail() {
+    public static String getrandomemail() {
 
         String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         StringBuilder salt = new StringBuilder();
@@ -126,7 +126,7 @@ public class Setup {
 
     }
 
-    public String GetRandomString() {
+    public static String GetRandomString() {
 
         String Randstr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder salt = new StringBuilder();
@@ -163,4 +163,19 @@ public class Setup {
 
     }
 
+    public boolean isFileDownloaded(String downloadPath, String fileName) {
+
+        boolean flag = false;
+        File dir = new File(downloadPath);
+        File[] dir_contents = dir.listFiles();
+
+        for (int i = 0; i < dir_contents.length; i++) {
+
+            if (dir_contents[i].getName().equals(fileName))
+
+                return flag=true;
+        }
+
+        return flag;
+    }
 }
